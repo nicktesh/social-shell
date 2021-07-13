@@ -109,43 +109,200 @@ ul {
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-}
 
-.btn-primary:hover {
-  background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
+  &:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
 
-.btn-primary:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.btn-primary.dark-blue {
-  background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #4481eb,
-    #04befe,
-    #3f86ed
-  );
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  position: relative;
-  z-index: 5;
+  &.dark-blue {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    position: relative;
+    z-index: 5;
+  }
 }
 
 button {
   background-color: transparent;
   border: 0;
   outline: none;
+  padding: 0;
+}
+
+/* Main Header & Navigation */
+
+#main-header {
+  background-color: grey;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  height: 80px;
+  align-items: center;
+  display: flex;
+
+  @media screen and (max-width: 992px) {
+    height: 60px;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding: 10px 10px;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 992px) {
+      padding: 10px 20px;
+    }
+
+    #site-logo img {
+      width: 100%;
+      max-width: 60px;
+    }
+
+    #mobile-logo img {
+      width: 100%;
+      max-width: 45px;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+
+      .navbar-links {
+        padding-right: 5px;
+
+        .navbar-nav {
+          flex-direction: row;
+          list-style: none;
+
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            max-width: 25px;
+          }
+
+          a {
+            text-decoration: none;
+            color: #ffffff;
+          }
+
+          a:hover {
+            text-decoration: underline;
+            color: #f2f2f2;
+          }
+
+          li {
+            padding: 0 5px;
+          }
+
+          .nav-item {
+            &:first-child {
+              padding-right: 20px;
+            }
+            &:last-child {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+
+      .username-box {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 992px) {
+          margin-left: 5px;
+        }
+
+        a {
+          display: flex;
+        }
+
+        #user-image {
+          width: 100%;
+          max-width: 35px;
+          border-radius: 50%;
+        }
+
+        p {
+          padding: 0 5px 0 10px;
+          color: $white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        #user-dropdown {
+          width: 100%;
+          max-width: 10px;
+        }
+      }
+
+      .navbar-icons {
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 992px) {
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          max-width: 25px;
+          margin: 0 5px;
+        }
+
+        a {
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    #site-logo {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #mobile-logo {
+      display: none;
+    }
+  }
 }
 
 /* Main Homepage */
 
 #main-homepage {
-  padding: 50px 0;
+  padding: 90px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 70px 0;
+  }
 }
 
 #main-homepage #feed,
