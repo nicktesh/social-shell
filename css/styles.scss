@@ -148,7 +148,8 @@ button {
 #main-header {
   background-color: grey;
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 10;
   height: 80px;
   align-items: center;
@@ -298,10 +299,10 @@ button {
 /* Main Homepage */
 
 #main-homepage {
-  padding: 90px 0;
+  padding: 10px 0;
 
   @media screen and (max-width: 992px) {
-    padding: 70px 0;
+    padding: 10px 0;
   }
 }
 
@@ -309,6 +310,17 @@ button {
 #main-homepage #sp-sec,
 #main-homepage #sp-prim {
   padding: 10px;
+}
+
+#main-homepage #sp-prim .sp-prim-inner {
+  position: sticky;
+  top: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  #main-homepage #sp-prim .sp-prim-inner {
+    top: 50px;
+  }
 }
 
 #main-homepage .analytics-tab,

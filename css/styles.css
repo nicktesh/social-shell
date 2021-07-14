@@ -104,7 +104,9 @@ button {
 #main-header {
   background-color: grey;
   width: 100%;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 10;
   height: 80px;
   -webkit-box-align: center;
@@ -225,16 +227,24 @@ button {
 
 /* Main Homepage */
 #main-homepage {
-  padding: 90px 0; }
+  padding: 10px 0; }
   @media screen and (max-width: 992px) {
     #main-homepage {
-      padding: 70px 0; } }
+      padding: 10px 0; } }
 
 #main-homepage #feed,
 #main-homepage #sp-sec,
 #main-homepage #sp-prim {
   padding: 10px; }
 
+#main-homepage #sp-prim .sp-prim-inner {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px; }
+
+@media screen and (max-width: 992px) {
+  #main-homepage #sp-prim .sp-prim-inner {
+    top: 50px; } }
 #main-homepage .analytics-tab,
 #main-homepage .recommendations-tab,
 #main-homepage .most-viewed-tab,
