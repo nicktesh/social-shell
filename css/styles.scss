@@ -319,7 +319,30 @@ button {
 
 @media screen and (max-width: 992px) {
   #main-homepage #sp-prim .sp-prim-inner {
-    top: 50px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-homepage #sp-prim .sp-prim-inner {
+    position: inherit;
+  }
+}
+
+#main-homepage #sp-sec .sp-sec-inner {
+  position: sticky;
+  top: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  #main-homepage #sp-sec .sp-sec-inner {
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-homepage #sp-sec .sp-sec-inner {
+    position: inherit;
   }
 }
 
