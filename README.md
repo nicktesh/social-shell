@@ -6,3 +6,6 @@ The purpose of this project is to build a social platform look and feel similar 
 - SCSS
 - Bootstrap 4/5
 - JavaScript
+
+# Github Page
+https://nicktesh.github.io/social-shell/
